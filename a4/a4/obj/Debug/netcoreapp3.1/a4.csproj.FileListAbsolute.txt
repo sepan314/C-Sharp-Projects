@@ -1,0 +1,11 @@
+/Users/sp/Projects/a4/a4/bin/Debug/netcoreapp3.1/a4
+/Users/sp/Projects/a4/a4/bin/Debug/netcoreapp3.1/a4.deps.json
+/Users/sp/Projects/a4/a4/bin/Debug/netcoreapp3.1/a4.runtimeconfig.json
+/Users/sp/Projects/a4/a4/bin/Debug/netcoreapp3.1/a4.runtimeconfig.dev.json
+/Users/sp/Projects/a4/a4/bin/Debug/netcoreapp3.1/a4.dll
+/Users/sp/Projects/a4/a4/bin/Debug/netcoreapp3.1/a4.pdb
+/Users/sp/Projects/a4/a4/obj/Debug/netcoreapp3.1/a4.csprojAssemblyReference.cache
+/Users/sp/Projects/a4/a4/obj/Debug/netcoreapp3.1/a4.AssemblyInfoInputs.cache
+/Users/sp/Projects/a4/a4/obj/Debug/netcoreapp3.1/a4.AssemblyInfo.cs
+/Users/sp/Projects/a4/a4/obj/Debug/netcoreapp3.1/a4.dll
+/Users/sp/Projects/a4/a4/obj/Debug/netcoreapp3.1/a4.pdb
