@@ -24,7 +24,7 @@ namespace a3
 
             Console.Write("Please enter an integer: ");
             int num5 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The output is: " + (num5 % 25));
+            Console.WriteLine("The output is: " + (num5 % 7));
 
             Console.ReadLine();
 
