@@ -33,7 +33,6 @@ namespace a5
 
             Console.WriteLine("Your estimated total for shipping this package is: $" + (width * height * length * weight / 100));
             Console.WriteLine("Thank you.");
-
             Console.ReadLine();
         }
     }
