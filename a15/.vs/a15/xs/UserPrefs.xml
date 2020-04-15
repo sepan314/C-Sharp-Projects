@@ -1,22 +1,22 @@
 ﻿<Properties StartupConfiguration="{19645255-3892-4DFD-8F9E-F40AFB5E2614}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="a15/As15.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="a15/Program.cs">
     <Files>
-      <File FileName="a15/Program.cs" Line="7" Column="18" />
-      <File FileName="a15/As15.cs" Line="6" Column="1" />
+      <File FileName="a15/Program.cs" Line="8" Column="10" />
+      <File FileName="a15/As15.cs" Line="9" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="a15" expanded="True">
             <Node name="a15" expanded="True">
-              <Node name="As15.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.a15 FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.a15 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
