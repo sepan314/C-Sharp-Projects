@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{202ED9C4-96FC-408B-856E-EC2181EA9448}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="a13/Overload.cs">
+    <Files>
+      <File FileName="a13/Program.cs" Line="7" Column="10" />
+      <File FileName="a13/Overload.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="a13" expanded="True">
+            <Node name="a13" expanded="True">
+              <Node name="Dependencies" expanded="True" selected="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.a13 FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
