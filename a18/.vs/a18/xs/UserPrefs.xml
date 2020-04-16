@@ -1,23 +1,24 @@
 ﻿<Properties StartupConfiguration="{8A143C9E-D565-4094-9D04-EDDB461C784C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="a18/Employee.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="a18/IQuittable.cs">
     <Files>
-      <File FileName="a18/Program.cs" Line="13" Column="1" />
-      <File FileName="a18/Person.cs" Line="1" Column="1" />
-      <File FileName="a18/Employee.cs" Line="1" Column="1" />
+      <File FileName="a18/Program.cs" Line="10" Column="32" />
+      <File FileName="a18/Person.cs" />
+      <File FileName="a18/Employee.cs" />
+      <File FileName="a18/IQuittable.cs" Line="6" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="a18" expanded="True">
             <Node name="a18" expanded="True">
-              <Node name="Employee.cs" selected="True" />
+              <Node name="IQuittable.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.a18 FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.a18 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

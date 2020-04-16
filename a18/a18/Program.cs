@@ -7,9 +7,12 @@ namespace a18
         static void Main(string[] args)
         {
             Employee p1 = new Employee();
-            p1.firstName = "Sample";
-            p1.lastName = "Student";
-            p1.SayName();
+            p1.name = "John Smith";
+            p1.Quit();
+
+            IQuittable p2 = new Employee { name = "Sarah Smith" };
+            p2.Quit();
+
 
             Console.ReadLine();
 

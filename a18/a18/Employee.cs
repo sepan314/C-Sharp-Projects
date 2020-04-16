@@ -1,13 +1,12 @@
 ﻿using System;
 namespace a18
 {
-    public class Employee : Person
+    public class Employee : IQuittable
     {
-
-        public override void SayName()
+        public string name;
+        public void Quit()
         {
-            Console.WriteLine($"Name: {firstName} {lastName}");
+            Console.WriteLine($"{name} has quit");
         }
-
     }
 }
