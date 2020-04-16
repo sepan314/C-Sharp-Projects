@@ -1,0 +1,11 @@
+/Users/sp/Desktop/C-Sharp-Projects/a17/a17/obj/Debug/netcoreapp3.1/a17.csprojAssemblyReference.cache
+/Users/sp/Desktop/C-Sharp-Projects/a17/a17/obj/Debug/netcoreapp3.1/a17.AssemblyInfoInputs.cache
+/Users/sp/Desktop/C-Sharp-Projects/a17/a17/obj/Debug/netcoreapp3.1/a17.AssemblyInfo.cs
+/Users/sp/Desktop/C-Sharp-Projects/a17/a17/bin/Debug/netcoreapp3.1/a17
+/Users/sp/Desktop/C-Sharp-Projects/a17/a17/bin/Debug/netcoreapp3.1/a17.deps.json
+/Users/sp/Desktop/C-Sharp-Projects/a17/a17/bin/Debug/netcoreapp3.1/a17.runtimeconfig.json
+/Users/sp/Desktop/C-Sharp-Projects/a17/a17/bin/Debug/netcoreapp3.1/a17.runtimeconfig.dev.json
+/Users/sp/Desktop/C-Sharp-Projects/a17/a17/bin/Debug/netcoreapp3.1/a17.dll
+/Users/sp/Desktop/C-Sharp-Projects/a17/a17/bin/Debug/netcoreapp3.1/a17.pdb
+/Users/sp/Desktop/C-Sharp-Projects/a17/a17/obj/Debug/netcoreapp3.1/a17.dll
+/Users/sp/Desktop/C-Sharp-Projects/a17/a17/obj/Debug/netcoreapp3.1/a17.pdb
