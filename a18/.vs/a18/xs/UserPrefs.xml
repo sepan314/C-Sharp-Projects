@@ -1,17 +1,16 @@
 ﻿<Properties StartupConfiguration="{8A143C9E-D565-4094-9D04-EDDB461C784C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="a18/Employee.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="a18/IQuittable.cs">
     <Files>
       <File FileName="a18/Program.cs" Line="11" Column="23" />
       <File FileName="a18/Person.cs" />
-      <File FileName="a18/Employee.cs" Line="12" Column="2" />
-      <File FileName="a18/IQuittable.cs" />
+      <File FileName="a18/IQuittable.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="a18" expanded="True">
             <Node name="a18" expanded="True">
-              <Node name="Employee.cs" selected="True" />
+              <Node name="IQuittable.cs" selected="True" />
             </Node>
           </Node>
         </State>
