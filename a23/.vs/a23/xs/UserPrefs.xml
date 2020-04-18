@@ -1,14 +1,14 @@
-﻿<Properties StartupConfiguration="{D72C5CDC-6808-4899-8F8B-2EDEAFF22EFF}|Default">
-  <MonoDevelop.Ide.ItemProperties.a22 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="a22/Program.cs">
+﻿<Properties StartupConfiguration="{076EA26E-C09F-44E6-8359-580C2238F37F}|Default">
+  <MonoDevelop.Ide.ItemProperties.a23 FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="a23/Program.cs">
     <Files>
-      <File FileName="a22/Program.cs" Line="15" Column="1" />
+      <File FileName="a23/Program.cs" Line="11" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="a22" expanded="True">
-            <Node name="a22" expanded="True">
+          <Node name="a23" expanded="True">
+            <Node name="a23" expanded="True">
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
