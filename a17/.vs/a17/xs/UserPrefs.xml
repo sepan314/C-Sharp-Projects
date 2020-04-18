@@ -1,21 +1,10 @@
 ﻿<Properties StartupConfiguration="{92699FA0-2E97-45F8-B6FA-250538C8F31F}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="a17/Employee.cs">
     <Files>
-      <File FileName="a17/Program.cs" Line="7" Column="1" />
-      <File FileName="a17/Person.cs" />
-      <File FileName="a17/Employee.cs" Line="6" Column="1" />
+      <File FileName="a17/Program.cs" Line="15" Column="22" />
+      <File FileName="a17/Person.cs" Line="11" Column="10" />
+      <File FileName="a17/Employee.cs" Line="2" Column="14" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="a17" expanded="True">
-            <Node name="a17" expanded="True">
-              <Node name="Employee.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.a17 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
