@@ -1,11 +1,18 @@
 ﻿<Properties StartupConfiguration="{5E5B0718-2EBA-4BDF-8266-A63921A8F418}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="a24/Person.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="a24/Program.cs">
     <Files>
-      <File FileName="a24/Program.cs" Line="8" Column="10" />
-      <File FileName="a24/Person.cs" Line="6" Column="15" />
+      <File FileName="a24/Program.cs" Line="18" Column="1" />
+      <File FileName="a24/Person.cs" Line="6" Column="16" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="a24" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.a24 FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.a24 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
