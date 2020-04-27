@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{B4374B25-E1FA-446A-86D1-DB572257F91C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WepAppTest1/Views/Home/Users.cshtml">
+    <Files>
+      <File FileName="WepAppTest1/Views/Home/Contact.cshtml" Line="6" Column="25" />
+      <File FileName="WepAppTest1/Views/Home/Index.cshtml" />
+      <File FileName="WepAppTest1/Controllers/HomeController.cs" />
+      <File FileName="WepAppTest1/Models/Users.cs" />
+      <File FileName="WepAppTest1/Views/Home/Users.cshtml" Line="16" Column="7" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WepAppTest1" expanded="True">
+            <Node name="WepAppTest1" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="Users.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WepAppTest1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

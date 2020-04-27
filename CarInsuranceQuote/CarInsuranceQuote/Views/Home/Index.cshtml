@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Get Your Car Insurance Quote Now!</h2>
+<br />
+<div class="mx-auto">
+    @using (Html.BeginForm("GetQuote", "Home", FormMethod.Post))
+    {
+        <div class="form-group row">
+            <label for="FirstName" class="col-sm-2 col-form-label">First Name</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="FirstName" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="LastName" class="col-sm-2 col-form-label">Last Name</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="LastName" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="Email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-3">
+                <input type="email" class="form-control" name="Email" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="DOB" class="col-sm-2 col-form-label">Date of Birth</label>
+            <div class="col-sm-3">
+                <input type="date" class="form-control" name="DOB" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="CarYear" class="col-sm-2 col-form-label">Car Year</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="CarYear" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="CarMake" class="col-sm-2 col-form-label">Car Make</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="CarMake" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="CarModel" class="col-sm-2 col-form-label">Car Model</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="CarModel" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="DUIbool" class="col-sm-2 col-form-label">Have you ever had a DUI?</label>
+            <div class="col-sm-3">
+                Yes @Html.RadioButton("DUIbool", "true")
+                No @Html.RadioButton("DUIbool", "false")
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="Speeding" class="col-sm-2 col-form-label">How many speeding tickets have you had?</label>
+            <div class="col-sm-3">
+                <input type="number" min="0" class="form-control" name="Speeding" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="InsuranceType" class="col-sm-2 col-form-label">Insurance Type</label>
+            <div class="col-sm-3">
+                Full Coverage @Html.RadioButton("InsuranceType", "true")
+                Liability @Html.RadioButton("InsuranceType", "false")
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    }
+</div>

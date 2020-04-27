@@ -1,0 +1,16 @@
+﻿@*using WebAppTest1.Models
+    model List<Users> *@
+@{
+    ViewData["Title"] = "Test";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Test @ViewBag.Id</h1>
+    @{
+        foreach (Users user in Model)
+        {
+            <p>Name: @user.FullName() </p>
+        }
+    }
+
+</div>
