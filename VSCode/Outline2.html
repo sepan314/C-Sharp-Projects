@@ -69,8 +69,8 @@
                     <div class="form-group row">
                         <label class="col-lg-2 col-md-2 control-label col-1" for="subjectField">Subject:</label>
                         <div class="col-lg-6 col-md-8">
-                            <input id="subjectField" name="subjectField" type="text" placeholder=""
-                                class="form-control">
+                            <input id="subjectField" name="subjectField" type="text" placeholder="" class="form-control"
+                                autocomplete="off">
 
                         </div>
                     </div>
@@ -78,7 +78,8 @@
                     <div class="form-group row">
                         <label class="col-lg-2 col-md-2 control-label col-1" for="bodyField">Body:</label>
                         <div class="col-lg-6 col-md-8">
-                            <textarea rows="5" class="form-control" id="bodyField" name="bodyField"></textarea>
+                            <textarea rows="5" class="form-control" id="bodyField" name="bodyField"
+                                style="resize: vertical;"></textarea>
                         </div>
                     </div>
 
@@ -103,6 +104,7 @@
                             <tr class="d-flex">
                                 <th class="col-2">From</th>
                                 <th class="col-5">Subject</th>
+                                <th class="col-2 d-none">Body</th>
                                 <th class="col-2">Date</th>
                                 <th class="col-3 col-lg-2" id="badges"></th>
                             </tr>
@@ -112,9 +114,16 @@
                             <!-- parentId is for future feature, isviewed-false is only present if isviewed is null-->
                             <!-- could use data- attributes to store info, js: use .data() to retrieve value -->
                             <tr class="d-flex inboxRow parentId-0" data-msg_id="1">
-                                <td class="col-2">Admin</td>
-                                <td class="col-5">Hello World</td>
-                                <td class="col-2">6/10/20 10:30PM</td>
+                                <td class="col-2 msgFrom">Admin</td>
+                                <td class="col-5 msgSubject">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                                <td class="col-2 msgDate">6/10/20 10:30PM</td>
+                                <td class="col-2 d-none msgBody">
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                                    esse cillum dolore eu fugiat nulla pariatur.
+                                </td>
                                 <td class="col-3 col-lg-2"><span
                                         class="badge badge-pill badge-secondary mx-2 list-reply">Reply</span><span
                                         class="badge badge-pill badge-danger list-del"><i class="fa fa-trash"
@@ -125,6 +134,7 @@
                                 <td class="col-2">Admin</td>
                                 <td class="col-5">Unread Message</td>
                                 <td class="col-2">6/12/20 2:00PM</td>
+                                <td class="col-2 d-none">Hello world</td>
                                 <!-- the pills are weird when resizing / fix later -->
                                 <td class="col-3 col-lg-2"><span
                                         class="badge badge-pill badge-secondary mx-2 list-reply">Reply</span><span
@@ -138,48 +148,34 @@
                 </div>
                 <!-- on load, this will be a template with no data, click of a msg will populate the template with the msg info and be displayed  -->
                 <!-- current html is dummy data / form-control-plaintext -->
-                <div id="inboxDetails" class="text-right" data-msg_id="1">
+                <div id="inboxDetails" data-msg_id="1">
                     <!-- add heading later "Message ID int" -->
+                    <h5 class="text-center my-2">Message</h5>
                     <form class="form">
-
-                        <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 control-label col-1" for="fromField">From:</label>
-                            <div class="col-lg-6 col-md-8">
-                                <input id="fromField" name="fromField" type="text" value="Admin" class="form-control"
-                                    readonly>
-
-                            </div>
+                        <div class="form-group row align-items-center">
+                            <label class="col-lg-2 col-md-2 control-label col-1 text-right">From:</label>
+                            <div class="col-lg-6 col-md-8 msgFrom"></div>
                         </div>
 
-                        <div class=" form-group row">
-                            <label class="col-lg-2 col-md-2 control-label col-1" for="date">Date:</label>
-                            <div class="col-lg-3 col-md-4">
-                                <input id="date" name="date" type="text" value="6/12/20 2:00PM" class="form-control"
-                                    readonly>
-
-                            </div>
+                        <div class=" form-group row align-items-center">
+                            <label class="col-lg-2 col-md-2 control-label col-1 text-right">Date:</label>
+                            <div class="col-lg-3 col-md-4 msgDate"></div>
                         </div>
 
-                        <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 control-label col-1" for="subjectField">Subject:</label>
-                            <div class="col-lg-6 col-md-8">
-                                <input id="subjectField" name="subjectField" type="text" value="Unread Message"
-                                    class="form-control" readonly>
-
-                            </div>
+                        <div class="form-group row align-items-center">
+                            <label class="col-lg-2 col-md-2 control-label col-1 text-right">Subject:</label>
+                            <p class="col-lg-6 col-md-8 msgSubject"></p>
                         </div>
 
-                        <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 control-label col-1" for="bodyField">Body:</label>
-                            <div class="col-lg-6 col-md-8">
-                                <textarea rows="5" class="form-control" id="bodyField" name="bodyField"
-                                    readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </textarea>
-                            </div>
+                        <div class="form-group row align-items-center">
+                            <label class="col-lg-2 col-md-2 control-label col-1 text-right">Body:</label>
+                            <div class="col-lg-6 col-md-8 msgBody"></div>
                         </div>
 
-                        <div class="form-group row">
+
+                        <div class="form-group row align-items-center">
                             <label class="col-lg-2 col-md-2 control-label col-1"></label>
-                            <div class="col-lg-6 col-md-8 clearfix">
+                            <div class="col-lg-6 col-md-8 clearfix text-right">
                                 <button type="button" id="goback" class="btn btn-info float-left">Go
                                     Back</button>
                                 <button type="button" id="reply" class="btn btn-success mx-1">Reply</button>
@@ -298,7 +294,10 @@
                     $(this).parent().removeClass(".isviewed-false");
                 }
                 $("#inboxList").hide();
-                //code will populate #inboxDetails with correct msg info, hide/show speed not working, asynchronous?
+                $("#inboxDetails .msgFrom").html($(this).parent().find(".msgFrom").html());
+                $("#inboxDetails .msgDate").html($(this).parent().find(".msgDate").html());
+                $("#inboxDetails .msgSubject").html($(this).parent().find(".msgSubject").html());
+                $("#inboxDetails .msgBody").html("<textarea rows='5' class='form-control' style='resize:none;' readonly>" + $(this).parent().find(".msgBody").html().replace(/\s+/g, " ").trim() + "</textarea>");
                 $("#inboxDetails").show();
             });
             $(".list-reply").on("click", function () {
