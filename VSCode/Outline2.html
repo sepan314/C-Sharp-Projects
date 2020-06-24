@@ -29,13 +29,37 @@
     #inboxDetails {
         display: none;
     }
+
+    #inboxList table {
+        table-layout: fixed;
+    }
+
+    .inboxRow .msgSubject {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    #inboxDetails .msgSubject,
+    #inboxDetails .msgBody,
+    #inboxDetails .msgFrom,
+    #inboxDetails .msgDate {
+        background-color: rgba(240, 240, 240, 0.5);
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        padding: 5px 15px;
+    }
+
+    #inboxDetails .msgBody {
+        min-height: 100px;
+    }
 </style>
 
 <body>
     <br><br>
     <div class="container">
         <!-- Nav tabs justify-content-between"-->
-        <ul class="nav nav-tabs justify-content-end" role="tablist">
+        <ul class="nav nav-tabs justify-content-end" role="tablist" id="navTabs">
             <li class="nav-item mr-auto">
                 <a class="nav-link btn btn-primary" data-toggle="tab" href="#newMsg">Compose</a>
             </li>
@@ -78,6 +102,7 @@
                                 style="resize: vertical;"></textarea>
                         </div>
                     </div>
+                    <input id="parentId" name="parentId" type="hidden" value="" class="">
 
                     <div class="form-group row">
                         <div class="col-lg-8 col-md-10">
@@ -109,16 +134,48 @@
                             <!-- for loop for all items in model -->
                             <!-- parentId is for future feature, isviewed-false is only present if isviewed is null-->
                             <!-- could use data- attributes to store info, js: use .data() to retrieve value -->
-                            <tr class="d-flex inboxRow parentId-0" data-msg_id="1">
+                            <tr class="d-flex inboxRow" data-msg_id="1" data-parent_id="0">
                                 <td class="col-2 msgFrom">Admin</td>
-                                <td class="col-5 msgSubject">Lorem ipsum.</td>
+                                <td class="col-5 msgSubject">
+                                    Lorem ipsum
+                                </td>
                                 <td class="col-2 msgDate">6/10/20 10:30PM</td>
                                 <td class="col-2 d-none msgBody">
-                                    Ut enim ad
+                                    dolor sit amet
                                 </td>
-                                <td class="col-3 col-lg-2"><span
-                                        class="badge badge-pill badge-secondary mx-2 list-reply">Reply</span><span
-                                        class="badge badge-pill badge-danger list-del"><i class="fa fa-trash"
+                                <td class="col-3 col-lg-2">
+                                    <span class="badge badge-pill badge-secondary mx-2 list-reply">Reply</span>
+                                    <span class="badge badge-pill badge-danger list-del"><i class="fa fa-trash"
+                                            aria-hidden="true"></i></span>
+                                </td>
+                            </tr>
+                            <tr class="d-flex inboxRow" data-msg_id="2" data-parent_id="0">
+                                <td class="col-2 msgFrom">Admin</td>
+                                <td class="col-5 msgSubject">
+                                    hello
+                                </td>
+                                <td class="col-2 msgDate">6/10/20 10:30PM</td>
+                                <td class="col-2 d-none msgBody">
+                                    world
+                                </td>
+                                <td class="col-3 col-lg-2">
+                                    <span class="badge badge-pill badge-secondary mx-2 list-reply">Reply</span>
+                                    <span class="badge badge-pill badge-danger list-del"><i class="fa fa-trash"
+                                            aria-hidden="true"></i></span>
+                                </td>
+                            </tr>
+                            <tr class="d-flex inboxRow" data-msg_id="3" data-parent_id="1">
+                                <td class="col-2 msgFrom">Admin</td>
+                                <td class="col-5 msgSubject">
+                                    thursday
+                                </td>
+                                <td class="col-2 msgDate">6/10/20 10:30PM</td>
+                                <td class="col-2 d-none msgBody">
+                                    friday
+                                </td>
+                                <td class="col-3 col-lg-2">
+                                    <span class="badge badge-pill badge-secondary mx-2 list-reply">Reply</span>
+                                    <span class="badge badge-pill badge-danger list-del"><i class="fa fa-trash"
                                             aria-hidden="true"></i></span>
                                 </td>
                             </tr>
@@ -128,7 +185,7 @@
                 </div>
                 <!-- on load, this will be a template with no data, click of a msg will populate the template with the msg info and be displayed  -->
                 <!-- current html is dummy data / form-control-plaintext -->
-                <div id="inboxDetails" data-msg_id="1">
+                <div id="inboxDetails" data-msg_id="" data-parent_id="">
                     <!-- add heading later "Message ID int" -->
                     <h5 class="text-center my-2">Message</h5>
                     <form class="form">
@@ -144,7 +201,7 @@
 
                         <div class="form-group row align-items-center">
                             <label class="col-lg-2 col-md-2 control-label col-1 text-right">Subject:</label>
-                            <p class="col-lg-6 col-md-8 msgSubject"></p>
+                            <div class="col-lg-6 col-md-8 msgSubject"></div>
                         </div>
 
                         <div class="form-group row align-items-center">
@@ -171,12 +228,60 @@
                 </div>
             </div>
 
-            <!-- sent tab -->
+            <!-- reply msg -->
+
+            <div id="replyMsg" class="d-none">
+                <h5 class="text-center my-2">Message</h5>
+                <form class="form text-right">
+                    <div class="form-group row">
+                        <label class="col-lg-2 col-md-2 control-label col-1" for="toField">To:</label>
+                        <div class="col-lg-6 col-md-8">
+                            <input id="toField" name="toField" type="text" value="" class="form-control">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-lg-2 col-md-2 control-label col-1" for="subjectField">Subject:</label>
+                        <div class="col-lg-6 col-md-8">
+                            <input id="subjectField" name="subjectField" type="text" value="" class="form-control"
+                                autocomplete="off">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-lg-2 col-md-2 control-label col-1" for="bodyField">Body:</label>
+                        <div class="col-lg-6 col-md-8">
+                            <textarea rows="5" class="form-control" id="bodyField" name="bodyField"
+                                style="resize: vertical;"></textarea>
+                        </div>
+                    </div>
+
+                    <input id="parentId" name="parentId" type="hidden" value="" class="">
+
+                    <div class="form-group row">
+                        <div class="col-lg-8 col-md-10">
+                            <button type="submit" class="btn btn-primary">Send</button>
+                            <button type="reset" class="btn btn-danger"><i class="fa fa-trash"
+                                    aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
         </div>
     </div>
 
     <script>
         $(document).ready(function () {
+            //reply
+            $("#inboxList tbody tr").each(function () {
+                if ($(this).data("parent_id") != 0) {
+                    console.log("one with parent");
+                }
+            });
             //behavior of row in inboxList tab
             $(".inboxRow").on("click", "td:not(:last-child)", function () {
                 var msgId_str = $(this).parent().data("msg_id");
@@ -187,14 +292,21 @@
                     $(this).parent().removeClass(".isviewed-false");
                 }
                 $("#inboxList").hide();
+                $("#inboxDetails").data("msg_id", msgId_str);
                 $("#inboxDetails .msgFrom").html($(this).parent().find(".msgFrom").html());
                 $("#inboxDetails .msgDate").html($(this).parent().find(".msgDate").html());
                 $("#inboxDetails .msgSubject").html($(this).parent().find(".msgSubject").html());
-                $("#inboxDetails .msgBody").html("<textarea rows='5' class='form-control' style='resize:none;' readonly>" + $(this).parent().find(".msgBody").html().replace(/\s+/g, " ").trim() + "</textarea>");
+                $("#inboxDetails .msgBody").html($(this).parent().find(".msgBody").html().replace(/\s+/g, " ").trim());
                 $("#inboxDetails").show();
             });
             $(".list-reply").on("click", function () {
                 var msgId_str = $(this).parents(".inboxRow").data("msg_id");
+                console.log(msgId_str);
+                $("#newMsg #toField").val($(this).closest(".inboxRow").find(".msgFrom").text());
+                $("#newMsg #subjectField").val("Re: " + $(this).closest(".inboxRow").find(".msgSubject").text());
+                $("#newMsg #parentId").val(msgId_str);
+                console.log("ParentId: " + $("#newMsg #parentId").val());
+                $('#navTabs a[href="#newMsg"]').tab('show');
             });
 
 
@@ -206,6 +318,11 @@
             });
             $("#inboxDetails #reply").on("click", function () {
                 var msgId_str = $(this).parents("#inboxDetails").data("msg_id");
+                $("#newMsg #toField").val($(this).closest("#inboxDetails").find(".msgFrom").text());
+                $("#newMsg #subjectField").val("Re: " + $(this).closest("#inboxDetails").find(".msgSubject").text());
+                $("#newMsg #parentId").val(msgId_str);
+                console.log("ParentId: " + $("#newMsg #parentId").val());
+                $('#navTabs a[href="#newMsg"]').tab('show');
             });
 
         });
